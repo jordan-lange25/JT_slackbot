@@ -1,8 +1,15 @@
 package main
 
-import "fmt" 
+import (
+	"github.com/jordan-lange25/JT_slackbot/pkg/chunky"
+)
 
 func main() {
+	token := ""
 
-    fmt.Println("Hello World!")
+	chunky := chunky.Chunky{}
+
+	chunky.InitalizeClient(token)
+
+	chunky.PostMessage("#general", "Hello, wurld!")
 }
